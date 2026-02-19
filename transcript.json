@@ -1,0 +1,205 @@
+{
+  "chunks": [
+    {
+      "text": "Picture an optimal approach for storing and retrieving data. Does something like this come to mind?\nWhat your mom tells you not to do, which is just like, throw everything\nall over the floor in random locations, is something that actually works\non a computer. It's a very non-human data structure.",
+      "start": 8.633,
+      "duration": 13.806000000000001
+    },
+    {
+      "text": "These data structures, called hash tables,\nare essential to modern computing. Hash tables are really\na general purpose tool that a program can then use on the fly. Hash tables are designed to insert\nor store elements of information in empty slots, and then search\nfor these elements via queries. The big challenge in hash table\ndesign is the trade off",
+      "start": 26.443,
+      "duration": 18.267999999999997
+    },
+    {
+      "text": "between the fullness of the hash\ntable versus the insertion query time. There's this tension between time and space. In 2025, a student and two coauthors published research\nthat overturned the field's decades -ong understanding about the limits\nof how hash tables can function. It is very impressive when an undergrad\ndisproves a longstanding, important",
+      "start": 48.59,
+      "duration": 19.602999999999994
+    },
+    {
+      "text": "conjecture of a Turing Award winner,\nbut he actually did something more exciting. Hash tables use an algorithm called a hash function to efficiently store and retrieve data. Like a librarian who uses an ingenious system to shelve books,\nthat speeds up locating them later on.",
+      "start": 73.323,
+      "duration": 15.307000000000002
+    },
+    {
+      "text": "The hash table can in principle\ndo these very clever things. In order to make these insertions\nand these queries be very time efficient. The first hash table was invented in the\n1950s by IBM engineer Hans-Peter Luhn. He had this insight that\nwhat you want to do when you're building a hash table, is you want to use randomness\nto your advantage. The hash function uses randomness\nto help select locations in memory.",
+      "start": 92.258,
+      "duration": 25.317000000000007
+    },
+    {
+      "text": "It then inserts information\nin the first open slot it finds. Basically, you just try a bunch\nof random spots until you find a free one. In 1985, the computer scientist Andrew Yao, who would go on to win the Turing Award,\nthe field's highest honor, concluded that this approach, called 'uniform\nprobing', was the best possible. So Yao's paper had this really fantastic\ntheorem that showed that, yes,",
+      "start": 122.247,
+      "duration": 19.852999999999994
+    },
+    {
+      "text": "uniform probing is optimal.\nBut optimal isn't always fast. As memory gets full, it can take longer\nand longer to find an empty slot. That last guy you need to insert, that's the killer, right? You're going to have to look and look and look. In the very basic table,\nif you have a million items,",
+      "start": 147.48,
+      "duration": 14.765000000000015
+    },
+    {
+      "text": "the last item you insert, you have to look\nin basically a million locations. And most computer scientists\nbelieve Yao's conclusion, that this was the best that could be done. Four decades later, Andrew Krapivin met his future collaborators\nwhile an undergrad at Rutgers University. He was taking my graduate\nalgorithms class, and he came up to me",
+      "start": 166.207,
+      "duration": 20.14500000000001
+    },
+    {
+      "text": "and said, oh, I have an improvement\nto your 'Tiny Pointers' paper. While tinkering with his mentor's\ndata objects called tiny pointers, Andrew ended up inventing his own\nhash table. That hash table is a very simple counterexample to Yao's conjecture. It kind of opened our eyes.",
+      "start": 189.856,
+      "duration": 16.349999999999994
+    },
+    {
+      "text": "We said, wow, maybe our understanding of this area\nis not as complete as we thought. So the team dived into the literature\non the topic while continuing to develop\na string of Andrew's new ideas. We ended up discovering\nthis much more surprising result, which was that it's\nnot just that Yao's conjecture isn't true,",
+      "start": 207.665,
+      "duration": 14.01400000000001
+    },
+    {
+      "text": "there's actually a way\nto just entirely bypass Yao's theorem. In their recent paper,\nAndrew and his collaborators constructed a new kind of hash table that doesn't\nalways put data in the first empty slot. I'm going to look ahead, and if I find\na free slot, that is for some reason a slot that I really want to fill,\nI will fill that slot instead. You're just not required\nto take the first one you can find",
+      "start": 226.476,
+      "duration": 21.72999999999999
+    },
+    {
+      "text": "and it does better. That to me was completely shocking. And their hash\ntable has another surprising property, a near constant average query time,\nwhich is something Yao thought impossible. We discovered that if you don't insert in the first spot,\nthe queries are super fast on average.",
+      "start": 251.834,
+      "duration": 15.26600000000002
+    },
+    {
+      "text": "Actually, your average doesn't even depend\non how full your table is. Even if you fill it up 100%, your average\nwill still be some fixed number. The main results of the paper says there is no fundamental\ntension between space and time. Over the last two decades, dozens of research teams\nhave raced to be",
+      "start": 271.813,
+      "duration": 22.028999999999996
+    },
+    {
+      "text": "the first to build a practical, paradigm\nshifting quantum computer. And the hope is that by building\nthis quantum computer with the able to solve these problems that are basically completely intractable\nusing classical machines. But the unique challenges of working\nwith qubits, the finicky fundamental building blocks of quantum computers,\nhave long kept this reality out of reach.",
+      "start": 296.087,
+      "duration": 15.389999999999986
+    },
+    {
+      "text": "We have a chasm, a chasm between what is\nphysically achievable in physical qubits, regarding error rates. How do we cross that chasm? Well, we're going to try to use\nquantum error-correction as a bridge. in a major first, A team at Google surpassed a key milestone\nin quantum error-correction",
+      "start": 316.274,
+      "duration": 12.928999999999974
+    },
+    {
+      "text": "charting a path forward. Finally, you can kind of see in practice\nwhat we kind of already knew would happen in theory\nfor like 20 years, 25 years. So yeah, that's very exciting. Unlike classical computers, that perform calculations using bits\nthat are either zeros or ones, quantum",
+      "start": 333.583,
+      "duration": 13.17999999999995
+    },
+    {
+      "text": "computers harness the unique properties\nof quantum mechanics. A qubit at the end of the day, it's kind of a mathematical object. A qubit can be sort of a continuum of states,\nincluding superpositions between 0 and 1. By manipulating the collective states\nof qubits, quantum",
+      "start": 351.601,
+      "duration": 11.093999999999994
+    },
+    {
+      "text": "computers can perform\npowerful calculations. But performing calculations with qubits\nis tricky. Errors easily creep in. You can have a continuum of states,\nwhich means you also have a continuum of errors you need to correct.  \nSort of an infinity of errors.",
+      "start": 365.823,
+      "duration": 12.802000000000021
+    },
+    {
+      "text": "And any single error\ncan ruin the whole calculation. In the 1990s, the mathematician Peter Shor\ndevised a groundbreaking factoring algorithm that demonstrated\nthe potential of quantum computing. But it required so many steps\nthat many thought it could never run. If you have a probability of an error\nevery 1000 steps, then you're never going\nto get through an algorithm",
+      "start": 380.046,
+      "duration": 20.853999999999985
+    },
+    {
+      "text": "that is a trillion steps\nwithout making a mistake. There was basically a lot of skepticism\nthat we could ever control quantum effects to that level of precision. Shor and others realized that it's possible, in principle,\nto correct errors by adding extra qubits. Then in 1998, Russian physicist Alexi Kitaev",
+      "start": 403.152,
+      "duration": 15.59899999999999
+    },
+    {
+      "text": "proposed one such technique called the 'surface code.' The surface code is a very surprisingly simple scheme. We just place our qubits\non a square lattice and then perform local measurements on these qubits. With the surface code, qubits are arranged in overlapping grids consisting of data qubits and error-measurement qubits.",
+      "start": 423.956,
+      "duration": 16.03299999999996
+    },
+    {
+      "text": "And so they're all sharing the quantum\ninformation in a very carefully orchestrated way,\nsuch that we can check for local errors. And this collection of physical qubits\nfunctions as a single, high quality logical qubit. We have many qubits work together\nto express a single, more perfect qubit, and that single logical qubit is more\nreliable than any of its physical parts.",
+      "start": 443.693,
+      "duration": 18.101
+    },
+    {
+      "text": "In order to build a viable quantum\ncomputer, Google's Quantum AI team\nfirst needed to overcome a major hurdle, engineering reliable qubits. If your physical qubits are good enough, their performance is better than a certain\nthreshold. Then, as we add more and more qubits,\nthen we'll exponentially reduce the errors",
+      "start": 468.009,
+      "duration": 14.305999999999983
+    },
+    {
+      "text": "that we're experiencing. But at first, the team's qubits weren't up to snuff. We've had systems that were very,\nvery good, but nonetheless\nthe physical qubits weren't quite there. And as we made the system larger,\nthe error just got worse and worse. The errors overwhelmed\nthe error-correction.",
+      "start": 486.486,
+      "duration": 12.012
+    },
+    {
+      "text": "We basically had to go back\nto the drawing board. After years spent improving their qubit design and scaling up the size of the surface\ncode, the team finally put their new 72-qubit processor,\ncodenamed Willow, to the test. We saw it like a 40 or 50%\nerror-suppression improvement just on this first run. Seeing it work\nconvincingly for the first time,",
+      "start": 500.833,
+      "duration": 16.349999999999966
+    },
+    {
+      "text": "it was a much more joyous room. They had crossed a critical threshold, causing error-rates\nto plummet exponentially. This is the first time\nthe whole system is working well together, where we can actually see the exponential\nwith our own eyes and see that error cutting in half\nas we increase the code size.",
+      "start": 521.646,
+      "duration": 15.22300000000007
+    },
+    {
+      "text": "I'm kind of in awe of the engineering\nthat went into this. It's really, really complicated. I think there's still a way to go,\nto make things practical. So I think this is kind of\na demonstration that things work. We know now that we can build devices\nthat are accurate enough, that if they are scaled,\nthey will be able to solve",
+      "start": 539.914,
+      "duration": 17.30899999999997
+    },
+    {
+      "text": "some of the hardest problems,\nthat, you know, humanity faces. A key challenge for programmers\nis managing trade-offs between computational speed\nor time, and space and memory. We want to minimize the time\nthat we take to solve problems. We also don't want our programs\nto consume a lot of memory.",
+      "start": 560.142,
+      "duration": 20.979999999999905
+    },
+    {
+      "text": "For decades, computer scientists\nassumed, that for certain problems, the relationship between time\nand space was essentially fixed. If a computation\nused a certain amount of time, it will probably use roughly\nthat amount of space. Now, in a groundbreaking paper,\nMIT researcher Ryan Williams has proved that you can always get away\nwith a lot less space.",
+      "start": 585.832,
+      "duration": 18.187999999999988
+    },
+    {
+      "text": "His improvement was enormous! No, it was completely unexpected, I didn't believe it was true! The space time problem is central\nto the field of complexity theory. Complexity theory studies what problems can be solved with efficient resources.",
+      "start": 607.189,
+      "duration": 14.01400000000001
+    },
+    {
+      "text": "The resource of time refers specifically to the number of steps a computation takes. Like, say, how many instructions that your processor goes through in order to find the end result? While space is the amount of memory\nutilized during this computation. How much space does\nit need to store intermediate",
+      "start": 624.874,
+      "duration": 14.680999999999926
+    },
+    {
+      "text": "results in its computation while it's working? For many algorithms,\nthe amount of space needed is roughly proportional to runtime. If you take T steps of time,\nthen the amount of space you consume is only about T.\nWhere you can't really add any more to your memory in one step,\nthen like one more unit of space.",
+      "start": 642.391,
+      "duration": 17.39300000000003
+    },
+    {
+      "text": "The longer and longer a computation takes,\nthe more and more memory it will use. In 1975, a trio of computer scientists\nfound a way to tweak this dynamic. They devised what's called a 'universal\nsimulation', a technique that could take any algorithm and convert it\nso it saves a little bit of space. From a theoretical perspective,\nthis is amazing, that you can even do this\nlittle bit of savings.",
+      "start": 664.288,
+      "duration": 20.812999999999988
+    },
+    {
+      "text": "But for the next 50 years,\nany further progress seemed impossible. There were like provable limitations\non the particular strategy that people were using. In 2024, William's curiosity was aroused\nby his students presentation on the work of researchers\nJames Cook and Ian Mertz.",
+      "start": 687.812,
+      "duration": 16.098999999999933
+    },
+    {
+      "text": "The pair were focused on a seemingly\nunrelated problem called 'tree evaluation.' When we worked on tree evaluation, we didn't think anything\nof, space versus time in that way. Williams noticed something interesting at its core. The way the Cook-Mertz tree\nevaluation algorithm goes, they say, hey, what if you just try\nto reuse the space over and over?",
+      "start": 707.415,
+      "duration": 16.307999999999993
+    },
+    {
+      "text": "I've already got space,\nIt's already allocated, i'm going to add on top of it. The algorithm can squeeze more information\ninto locations in memory already in use. Adding in a bunch of extra things. But all the extra\nthings are going to cancel out. But you didn't have to use extra space.",
+      "start": 727.81,
+      "duration": 15.307000000000016
+    },
+    {
+      "text": "Williams also realized\nthat Cook and Mertz's approach could possibly be used\nfor something more wide-ranging. It gives a very specific,\nvery well-defined procedure for taking sort of any computation\nand re-implementing it so that it uses\ndrastically less space than before. So Williams wrote down his thoughts before\nsetting them aside for a few months.",
+      "start": 745.369,
+      "duration": 18.267999999999915
+    },
+    {
+      "text": "I just thought this was like\nanother one of my harebrained ideas. I went back, I returned,\nI decided, okay, I'm just going to confirm that this thing doesn't work. But it did work. And it functions as a universal simulation\nthat converts any algorithm to save a substantial amount of space.",
+      "start": 768.058,
+      "duration": 14.597999999999956
+    },
+    {
+      "text": "In my paper, I show that, actually time T, in this very general framework can be simulated\nonly about square root of T space. So it's a it's a drastic\nspace savings. And this is true regardless of,\nthe kind of computation you're running, When it comes down to it all, I'm",
+      "start": 785.91,
+      "duration": 20.979000000000042
+    },
+    {
+      "text": "all I do is sort of uncover\nthe magic that was already there. So Ryan did the most important thing\nthat you can do, which is that he drew a connection between things\nthat were already in the literature and then put in the pure elbow grease\nto make the whole thing work. I'm in awe of, the work that he did. But of course, I'm also thrilled to have played a part in it.",
+      "start": 808.182,
+      "duration": 20.478999999999928
+    }
+  ],
+  "context": "Picture an optimal approach for storing and retrieving data. Does something like this come to mind?\nWhat your mom tells you not to do, which is just like, throw everything\nall over the floor in random locations, is something that actually works\non a computer. It's a very non-human data structure. These data structures, called hash tables,\nare essential to modern computing. Hash tables are really\na general purpose tool that a program can then use on the fly. Hash tables are designed to insert\nor store elements of information in empty slots, and then search\nfor these elements via queries. The big challenge in hash table\ndesign is the trade off between the fullness of the hash\ntable versus the insertion query time. There's this tension between time and space. In 2025, a student and two coauthors published research\nthat overturned the field's decades -ong understanding about the limits\nof how hash tables can function. It is very impressive when an undergrad\ndisproves a longstanding, important conjecture of a Turing Award winner,\nbut he actually did something more exciting. Hash tables use an algorithm called a hash function to efficiently store and retrieve data. Like a librarian who uses an ingenious system to shelve books,\nthat speeds up locating them later on. The hash table can in principle\ndo these very clever things. In order to make these insertions\nand these queries be very time efficient. The first hash table was invented in the\n1950s by IBM engineer Hans-Peter Luhn. He had this insight that\nwhat you want to do when you're building a hash table, is you want to use randomness\nto your advantage. The hash function uses randomness\nto help select locations in memory. It then inserts information\nin the first open slot it finds. Basically, you just try a bunch\nof random spots until you find a free one. In 1985, the computer scientist Andrew Yao, who would go on to win the Turing Award,\nthe field's highest honor, concluded that this approach, called 'uniform\nprobing', was the best possible. So Yao's paper had this really fantastic\ntheorem that showed that, yes, uniform probing is optimal.\nBut optimal isn't always fast. As memory gets full, it can take longer\nand longer to find an empty slot. That last guy you need to insert, that's the killer, right? You're going to have to look and look and look. In the very basic table,\nif you have a million items, the last item you insert, you have to look\nin basically a million locations. And most computer scientists\nbelieve Yao's conclusion, that this was the best that could be done. Four decades later, Andrew Krapivin met his future collaborators\nwhile an undergrad at Rutgers University. He was taking my graduate\nalgorithms class, and he came up to me and said, oh, I have an improvement\nto your 'Tiny Pointers' paper. While tinkering with his mentor's\ndata objects called tiny pointers, Andrew ended up inventing his own\nhash table. That hash table is a very simple counterexample to Yao's conjecture. It kind of opened our eyes. We said, wow, maybe our understanding of this area\nis not as complete as we thought. So the team dived into the literature\non the topic while continuing to develop\na string of Andrew's new ideas. We ended up discovering\nthis much more surprising result, which was that it's\nnot just that Yao's conjecture isn't true, there's actually a way\nto just entirely bypass Yao's theorem. In their recent paper,\nAndrew and his collaborators constructed a new kind of hash table that doesn't\nalways put data in the first empty slot. I'm going to look ahead, and if I find\na free slot, that is for some reason a slot that I really want to fill,\nI will fill that slot instead. You're just not required\nto take the first one you can find and it does better. That to me was completely shocking. And their hash\ntable has another surprising property, a near constant average query time,\nwhich is something Yao thought impossible. We discovered that if you don't insert in the first spot,\nthe queries are super fast on average. Actually, your average doesn't even depend\non how full your table is. Even if you fill it up 100%, your average\nwill still be some fixed number. The main results of the paper says there is no fundamental\ntension between space and time. Over the last two decades, dozens of research teams\nhave raced to be the first to build a practical, paradigm\nshifting quantum computer. And the hope is that by building\nthis quantum computer with the able to solve these problems that are basically completely intractable\nusing classical machines. But the unique challenges of working\nwith qubits, the finicky fundamental building blocks of quantum computers,\nhave long kept this reality out of reach. We have a chasm, a chasm between what is\nphysically achievable in physical qubits, regarding error rates. How do we cross that chasm? Well, we're going to try to use\nquantum error-correction as a bridge. in a major first, A team at Google surpassed a key milestone\nin quantum error-correction charting a path forward. Finally, you can kind of see in practice\nwhat we kind of already knew would happen in theory\nfor like 20 years, 25 years. So yeah, that's very exciting. Unlike classical computers, that perform calculations using bits\nthat are either zeros or ones, quantum computers harness the unique properties\nof quantum mechanics. A qubit at the end of the day, it's kind of a mathematical object. A qubit can be sort of a continuum of states,\nincluding superpositions between 0 and 1. By manipulating the collective states\nof qubits, quantum computers can perform\npowerful calculations. But performing calculations with qubits\nis tricky. Errors easily creep in. You can have a continuum of states,\nwhich means you also have a continuum of errors you need to correct.  \nSort of an infinity of errors. And any single error\ncan ruin the whole calculation. In the 1990s, the mathematician Peter Shor\ndevised a groundbreaking factoring algorithm that demonstrated\nthe potential of quantum computing. But it required so many steps\nthat many thought it could never run. If you have a probability of an error\nevery 1000 steps, then you're never going\nto get through an algorithm that is a trillion steps\nwithout making a mistake. There was basically a lot of skepticism\nthat we could ever control quantum effects to that level of precision. Shor and others realized that it's possible, in principle,\nto correct errors by adding extra qubits. Then in 1998, Russian physicist Alexi Kitaev proposed one such technique called the 'surface code.' The surface code is a very surprisingly simple scheme. We just place our qubits\non a square lattice and then perform local measurements on these qubits. With the surface code, qubits are arranged in overlapping grids consisting of data qubits and error-measurement qubits. And so they're all sharing the quantum\ninformation in a very carefully orchestrated way,\nsuch that we can check for local errors. And this collection of physical qubits\nfunctions as a single, high quality logical qubit. We have many qubits work together\nto express a single, more perfect qubit, and that single logical qubit is more\nreliable than any of its physical parts. In order to build a viable quantum\ncomputer, Google's Quantum AI team\nfirst needed to overcome a major hurdle, engineering reliable qubits. If your physical qubits are good enough, their performance is better than a certain\nthreshold. Then, as we add more and more qubits,\nthen we'll exponentially reduce the errors that we're experiencing. But at first, the team's qubits weren't up to snuff. We've had systems that were very,\nvery good, but nonetheless\nthe physical qubits weren't quite there. And as we made the system larger,\nthe error just got worse and worse. The errors overwhelmed\nthe error-correction. We basically had to go back\nto the drawing board. After years spent improving their qubit design and scaling up the size of the surface\ncode, the team finally put their new 72-qubit processor,\ncodenamed Willow, to the test. We saw it like a 40 or 50%\nerror-suppression improvement just on this first run. Seeing it work\nconvincingly for the first time, it was a much more joyous room. They had crossed a critical threshold, causing error-rates\nto plummet exponentially. This is the first time\nthe whole system is working well together, where we can actually see the exponential\nwith our own eyes and see that error cutting in half\nas we increase the code size. I'm kind of in awe of the engineering\nthat went into this. It's really, really complicated. I think there's still a way to go,\nto make things practical. So I think this is kind of\na demonstration that things work. We know now that we can build devices\nthat are accurate enough, that if they are scaled,\nthey will be able to solve some of the hardest problems,\nthat, you know, humanity faces. A key challenge for programmers\nis managing trade-offs between computational speed\nor time, and space and memory. We want to minimize the time\nthat we take to solve problems. We also don't want our programs\nto consume a lot of memory. For decades, computer scientists\nassumed, that for certain problems, the relationship between time\nand space was essentially fixed. If a computation\nused a certain amount of time, it will probably use roughly\nthat amount of space. Now, in a groundbreaking paper,\nMIT researcher Ryan Williams has proved that you can always get away\nwith a lot less space. His improvement was enormous! No, it was completely unexpected, I didn't believe it was true! The space time problem is central\nto the field of complexity theory. Complexity theory studies what problems can be solved with efficient resources. The resource of time refers specifically to the number of steps a computation takes. Like, say, how many instructions that your processor goes through in order to find the end result? While space is the amount of memory\nutilized during this computation. How much space does\nit need to store intermediate results in its computation while it's working? For many algorithms,\nthe amount of space needed is roughly proportional to runtime. If you take T steps of time,\nthen the amount of space you consume is only about T.\nWhere you can't really add any more to your memory in one step,\nthen like one more unit of space. The longer and longer a computation takes,\nthe more and more memory it will use. In 1975, a trio of computer scientists\nfound a way to tweak this dynamic. They devised what's called a 'universal\nsimulation', a technique that could take any algorithm and convert it\nso it saves a little bit of space. From a theoretical perspective,\nthis is amazing, that you can even do this\nlittle bit of savings. But for the next 50 years,\nany further progress seemed impossible. There were like provable limitations\non the particular strategy that people were using. In 2024, William's curiosity was aroused\nby his students presentation on the work of researchers\nJames Cook and Ian Mertz. The pair were focused on a seemingly\nunrelated problem called 'tree evaluation.' When we worked on tree evaluation, we didn't think anything\nof, space versus time in that way. Williams noticed something interesting at its core. The way the Cook-Mertz tree\nevaluation algorithm goes, they say, hey, what if you just try\nto reuse the space over and over? I've already got space,\nIt's already allocated, i'm going to add on top of it. The algorithm can squeeze more information\ninto locations in memory already in use. Adding in a bunch of extra things. But all the extra\nthings are going to cancel out. But you didn't have to use extra space. Williams also realized\nthat Cook and Mertz's approach could possibly be used\nfor something more wide-ranging. It gives a very specific,\nvery well-defined procedure for taking sort of any computation\nand re-implementing it so that it uses\ndrastically less space than before. So Williams wrote down his thoughts before\nsetting them aside for a few months. I just thought this was like\nanother one of my harebrained ideas. I went back, I returned,\nI decided, okay, I'm just going to confirm that this thing doesn't work. But it did work. And it functions as a universal simulation\nthat converts any algorithm to save a substantial amount of space. In my paper, I show that, actually time T, in this very general framework can be simulated\nonly about square root of T space. So it's a it's a drastic\nspace savings. And this is true regardless of,\nthe kind of computation you're running, When it comes down to it all, I'm all I do is sort of uncover\nthe magic that was already there. So Ryan did the most important thing\nthat you can do, which is that he drew a connection between things\nthat were already in the literature and then put in the pure elbow grease\nto make the whole thing work. I'm in awe of, the work that he did. But of course, I'm also thrilled to have played a part in it."
+}
