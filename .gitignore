@@ -1,3 +1,5 @@
 test.py
 __pycache__/
 api_key.py
+.tmp.driveupload/
+.tmp.drivedownload/
