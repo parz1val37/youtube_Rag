@@ -14,12 +14,12 @@ class YoutubeRagAssistant:
   # gives transcript of video in format-- list[dict]
   def __fetch_transcript(self, url: str):
     # extracting video_id from the given url.
-    def extract_video_id(url: str):
-      video_id = url.split("?")[0].split("/")[-1]
-      return video_id
-    video_id = extract_video_id(url)
-  
     try:
+      def extract_video_id(url: str):
+        video_id = url.split("?")[0].split("/")[-1]
+        return video_id
+      video_id = extract_video_id(url)
+  
       yt_api = YouTubeTranscriptApi()
       formatter = JSONFormatter()
       raw_transcript = yt_api.fetch(video_id)
@@ -126,9 +126,19 @@ class YoutubeRagAssistant:
     return response.text
 
 
-
+  # save dataframe to use it without making it again and again
   def initiate_dataframe(self, url):
-    pass
+    # fetch transcript
+    transcript = self.__fetch_transcript(url)
+    # merge chunks of transcript and get summary
+    transcript, summary = self.__merge_chunks(transcript) #type: ignore
+    # create embeddings of chunk in transcript
+    transcript = self.__create_embeddings(transcript)
+    
+    dataframe = pd.DataFrame(transcript)
+    return dataframe
+    
+  
 
 
 
