@@ -22,6 +22,6 @@ def fetch_relevant_chunk(user_query: str, dataframe, top_result=3):
 
   top_similar_indx = similarity.argsort()[-top_result:][::-1]
 
-  relevant_chunk = dataframe.loc[top_similar_indx][["text", "start", "duration"]]
+  relevant_data = dataframe.loc[top_similar_indx][["text", "start", "duration"]]
 
-  return relevant_chunk.to_json(orient="records")
+  return relevant_data.to_json(orient="records")
