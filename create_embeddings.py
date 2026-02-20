@@ -7,9 +7,8 @@ import ollama
 import json
 
 # Parameter: Json data
-def create_embeddings(transcript: dict):
-  chunks = transcript["chunks"]
-  arr_text = [chunk["text"] for chunk in chunks]
+def create_embeddings(transcript: list[dict]):
+  arr_text = [chunk["text"] for chunk in transcript]
 
   def ollama_embed(arr_text):
     response = ollama.embed(
@@ -19,7 +18,7 @@ def create_embeddings(transcript: dict):
   
   embeddings = ollama_embed(arr_text) # It's array of embeddings
 
-  for i, chunk in enumerate(transcript["chunks"]):
+  for i, chunk in enumerate(transcript):
     chunk["embedding"] = embeddings[i]
 
   return transcript
