@@ -11,6 +11,11 @@ import ollama
 
 
 class YoutubeRagAssistant:
+  def __init__(self, url) -> None:
+    self._url = url
+    # initialize dataframe and summary at once
+    self._dataframe, self._summary = self.__initiate_dataframe_and_get_summary()
+  
   # gives transcript of video in format-- list[dict]
   def __fetch_transcript(self, url: str):
     # extracting video_id from the given url.
@@ -58,7 +63,7 @@ class YoutubeRagAssistant:
         })
       
       # saving the content of video for creating summary.
-      summary = " ".join(chunk["text"] for chunk in new_chunk)
+      summary: str = " ".join(chunk["text"] for chunk in new_chunk)
       # saving new_chunk as json
       
       return new_chunk, summary
@@ -94,8 +99,8 @@ class YoutubeRagAssistant:
   # 1. get query from user
   # 2. using Cosine Similarity find the most relevant chunk(2 or more)
   # 3. make a prompt and feed to LLM with relevant chunk and query.
-  def __fetch_relevant_chunk(self, user_query: str, dataframe, top_result=3):
-    try:  
+  def __fetch_relevant_metadata(self, user_query: str, dataframe, top_result=3):
+    try:
       def embed_query(user_query):
         response = ollama.embed(
           model="nomic-embed-text",
@@ -140,9 +145,9 @@ class YoutubeRagAssistant:
       print(f"Error: {e}")
 
   # save dataframe to use it without making it again and again
-  def __initiate_dataframe(self, url: str):
+  def __initiate_dataframe_and_get_summary(self):
     # fetch transcript
-    transcript = self.__fetch_transcript(url)
+    transcript = self.__fetch_transcript(self._url)
     # merge chunks of transcript and get summary
     transcript, summary = self.__merge_chunks(transcript) #type: ignore
     # create embeddings of chunk in transcript
@@ -150,9 +155,24 @@ class YoutubeRagAssistant:
     
     return pd.DataFrame(transcript), summary
 
+  def chat(self):
+    try:
+      query = input("Ask me a question(type- n, to exit): ")
+      while query!='n':
+        metadata = self.__fetch_relevant_metadata(query, self._dataframe)
 
-  def relevant_metadata(self, query, dataframe, top_result=3):
-    pass
+        llm_response = self.__LLM_response(query, metadata, self._summary)
 
-  def gen_LLM_response(self, query, metadata):
-    pass
+        print(llm_response)
+        print()
+        query = input("Ask me a question(type- n, to exit): ")        
+      print("Chat closed")
+    except Exception as e:
+      print(f"ERROR: {e}")
+
+if __name__ == "__main__":
+
+  yt_rag = YoutubeRagAssistant("https://youtu.be/hSL4L3LpL2I?si=P3zfrciNs47uHREK")
+  yt_rag.chat()
+  # print(data_frame.info())
+  # print(summary[0:150])
