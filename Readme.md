@@ -17,3 +17,7 @@
 
 ## Note:
 1. Use any free LLM agent api or paid api if you have (I used gemini api)
+2. Use an Embedding model(Ollama nomic-text-embed is used).
+
+## Potential use case:
+- A chrome extension can be made which answers the query related to the playing YouTube video.
